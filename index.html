@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sound Project</title>
+  </head>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      height: 100vh;
+      background: rgb(0, 144, 170);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      background: rgb(1, 190, 143);
+      color: #fff;
+      padding: 8px 18px;
+      border: 0;
+      display: block;
+      border-radius: 5px;
+      font-size: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 3px, 4px, 18px rgba(0, 0, 0, 0.4);
+      font-family: roboto, "san-serif";
+      transition: all 0.5s ease-in-out;
+    }
+    button:hover {
+      background: rgb(1, 177, 221);
+      transform: translateY(-1px);
+      box-shadow: 2px, 3px, 10px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <button onclick="makeSound()"><h3>Make break sound</h3></button>
+      <button onclick="makeSound1()"><h3>Make break sound 1</h3></button>
+      <button onclick="makeSound2()"><h3>Make break sound 2</h3></button>
+      <button onclick="makeSound3()"><h3>Make break sound 3</h3></button>
+      <button onclick="makeSound4()"><h3>Make break sound 4</h3></button>
+      <button onclick="makeSound5()"><h3>Make break sound 5</h3></button>
+      <button onclick="makeSound6()"><h3>Make break sound 6</h3></button>
+      <button onclick="makeSound7()"><h3>Make break sound 7</h3></button>
+      <button onclick="makeSound8()"><h3>Make break sound 8</h3></button>
+      <button onclick="makeSound9()"><h3>Make break sound 9</h3></button>
+      <button onclick="makeSound10()"><h3>Make break sound 10</h3></button>
+      <button onclick="makeSound11()"><h3>Make break sound 11</h3></button>
+    </div>
+    <script>
+      var sound120 = new Audio();
+      var sound80 = new Audio();
+      var sound75 = new Audio();
+      var sound70 = new Audio();
+
+      sound120.src = "Ope project 120db.mp3";
+      sound80.src = "Ope project 80db.mp3";
+      sound75.src = "Ope project 75db.mp3";
+      sound70.src = "Ope project 70db.mp3";
+
+      function play(type, timer) {
+        setTimeout(() => {
+          type.play();
+        }, timer);
+      }
+      function pause(type, timer) {
+        setTimeout(() => {
+          type.pause();
+        }, timer);
+      }
+      
+      // const waitingTime = function (min, max){
+      //   return Math.floor(Math.random() * (max - min + 1)) + min
+      // }
+      function wait(waitingTime){
+        setTimeout(()=> {
+          console.log(`Waiting time is:${waitingTime/1000}sec`);
+        },waitingTime)
+      }
+
+
+      function makeSound() {
+                // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            // wait(7000); // 7sec
+            play(sound120, 7000);
+            pause(sound120, 7040);
+            // wait(14000); //6.96sec
+            play(sound120, 14000);
+            pause(sound120, 14040);
+            // wait(22000); // 7.96sec
+            play(sound120, 22000);
+            pause(sound120, 22040);
+
+          //Waiting time
+          // wait(32000);//9.96
+
+          //The Second Sound Round
+          play(sound70, 32000);
+          pause(sound70, 32020);
+          // wait(32140);//0.1sec(100milisec);
+          play(sound120, 32140);
+          pause(sound120, 32180); 
+
+          //Second Waiting Time
+          // wait(44000); //11.82sec
+          
+          //The Third Sound Round
+          play(sound75, 44000);
+          pause(sound75, 44020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 44120);
+          pause(sound120, 44160); 
+          
+          //Third Waiting time
+          // wait(65000) //20.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 65000);
+          pause(sound80, 65020);
+          // wait(65120);//0.1sec(100milisec);
+          play(sound120, 65120);
+          pause(sound120, 65160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000;
+      }
+//DOing
+      function makeSound1() {
+             // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(40000);//12.96
+
+          //The Second Sound Round
+          play(sound70, 40000);
+          pause(sound70, 40020);
+          wait(40120);//0.1sec(100milisec);
+          play(sound120, 40120);
+          pause(sound120, 40160); 
+
+          //Second Waiting Time
+          wait(55000); //14.84sec
+          
+          //The Third Sound Round
+          play(sound75, 55000);
+          pause(sound75, 55020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 55120);
+          pause(sound120, 55160); 
+          
+          //Third Waiting time
+          wait(69000) //13.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 69000);
+          pause(sound80, 69020);
+          wait(69120);//0.1sec(100milisec);
+          play(sound120, 69120);
+          pause(sound120, 69160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+      function makeSound2() {
+                     // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(46000);//18.96
+
+          //The Second Sound Round
+          play(sound70, 46000);
+          pause(sound70, 46020);
+          wait(46120);//0.1sec(100milisec);
+          play(sound120, 46120);
+          pause(sound120, 46160); 
+
+          //Second Waiting Time
+          wait(57000); //10.84sec
+          
+          //The Third Sound Round
+          play(sound75, 57000);
+          pause(sound75, 57020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 57120);
+          pause(sound120, 57160); 
+          
+          //Third Waiting time
+          wait(75000) //17.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 75000);
+          pause(sound80, 75020);
+          wait(75120);//0.1sec(100milisec);
+          play(sound120, 75120);
+          pause(sound120, 75160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+      function makeSound3() {
+                     // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(44000);//16.96
+
+          //The Second Sound Round
+          play(sound70, 44000);
+          pause(sound70, 44020);
+          wait(44120);//0.1sec(100milisec);
+          play(sound120, 44120);
+          pause(sound120, 44160); 
+
+          //Second Waiting Time
+          wait(64000); //19.84sec
+          
+          //The Third Sound Round
+          play(sound75, 64000);
+          pause(sound75, 64020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 64120);
+          pause(sound120, 64160); 
+          
+          //Third Waiting time
+          wait(86000) //21.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 86000);
+          pause(sound80, 86020);
+          wait(86120);//0.1sec(100milisec);
+          play(sound120, 86120);
+          pause(sound120, 86160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+      function makeSound4() {
+                     // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(48000);//20.96
+
+          //The Second Sound Round
+          play(sound70, 48000);
+          pause(sound70, 48020);
+          wait(48120);//0.1sec(100milisec);
+          play(sound120, 48120);
+          pause(sound120, 48160); 
+
+          //Second Waiting Time
+          wait(65000); //16.84sec
+          
+          //The Third Sound Round
+          play(sound75, 65000);
+          pause(sound75, 65020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 65120);
+          pause(sound120, 65160); 
+          
+          //Third Waiting time
+          wait(76000) //10.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 76000);
+          pause(sound80, 76020);
+          wait(76120);//0.1sec(100milisec);
+          play(sound120, 76120);
+          pause(sound120, 76160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+      function makeSound5() {
+                     // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(43000);//15.96
+
+          //The Second Sound Round
+          play(sound70, 43000);
+          pause(sound70, 43020);
+          wait(43120);//0.1sec(100milisec);
+          play(sound120, 43120);
+          pause(sound120, 43160); 
+
+          //Second Waiting Time
+          wait(66000); //22.84sec
+          
+          //The Third Sound Round
+          play(sound75, 66000);
+          pause(sound75, 66020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 66120);
+          pause(sound120, 66160); 
+          
+          //Third Waiting time
+          wait(78000) //11.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 78000);
+          pause(sound80, 78020);
+          wait(78120);//0.1sec(100milisec);
+          play(sound120, 78120);
+          pause(sound120, 78160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+      function makeSound6() {
+                     // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(52000);//24.96
+
+          //The Second Sound Round
+          play(sound70, 52000);
+          pause(sound70, 52020);
+          wait(52120);//0.1sec(100milisec);
+          play(sound120, 52120);
+          pause(sound120, 52160); 
+
+          //Second Waiting Time
+          wait(64000); //11.84sec
+          
+          //The Third Sound Round
+          play(sound75, 64000);
+          pause(sound75, 64020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 64120);
+          pause(sound120, 64160); 
+          
+          //Third Waiting time
+          wait(80000) //15.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 80000);
+          pause(sound80, 80020);
+          wait(80120);//0.1sec(100milisec);
+          play(sound120, 80120);
+          pause(sound120, 80160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+      function makeSound7() {
+                     // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(42000);//14.96
+
+          //The Second Sound Round
+          play(sound70, 42000);
+          pause(sound70, 42020);
+          wait(42120);//0.1sec(100milisec);
+          play(sound120, 42120);
+          pause(sound120, 42160); 
+
+          //Second Waiting Time
+          wait(62000); //19.84sec
+          
+          //The Third Sound Round
+          play(sound75, 62000);
+          pause(sound75, 62020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 62120);
+          pause(sound120, 62160); 
+          
+          //Third Waiting time
+          wait(86000) //23.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 86000);
+          pause(sound80, 86020);
+          wait(86120);//0.1sec(100milisec);
+          play(sound120, 86120);
+          pause(sound120, 86160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+      function makeSound8() {
+                     // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(39000);//11.96
+
+          //The Second Sound Round
+          play(sound70, 39000);
+          pause(sound70, 39020);
+          wait(39120);//0.1sec(100milisec);
+          play(sound120, 39120);
+          pause(sound120, 39160); 
+
+          //Second Waiting Time
+          wait(64000); //24.84sec
+          
+          //The Third Sound Round
+          play(sound75, 64000);
+          pause(sound75, 64020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 64120);
+          pause(sound120, 64160); 
+          
+          //Third Waiting time
+          wait(82000) //17.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 82000);
+          pause(sound80, 82020);
+          wait(82120);//0.1sec(100milisec);
+          play(sound120, 82120);
+          pause(sound120, 82160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+      function makeSound9() {
+                     // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(41000);//13.96
+
+          //The Second Sound Round
+          play(sound70, 41000);
+          pause(sound70, 41020);
+          wait(41120);//0.1sec(100milisec);
+          play(sound120, 41120);
+          pause(sound120, 41160); 
+
+          //Second Waiting Time
+          wait(58000); //16.84sec
+          
+          //The Third Sound Round
+          play(sound75, 58000);
+          pause(sound75, 58020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 58120);
+          pause(sound120, 58160); 
+          
+          //Third Waiting time
+          wait(73000) //14.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 73000);
+          pause(sound80, 73020);
+          wait(73120);//0.1sec(100milisec);
+          play(sound120, 73120);
+          pause(sound120, 73160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+      function makeSound10() {
+                     // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(50000);//22.96
+
+          //The Second Sound Round
+          play(sound70, 50000);
+          pause(sound70, 50020);
+          wait(50120);//0.1sec(100milisec);
+          play(sound120, 50120);
+          pause(sound120, 50160); 
+
+          //Second Waiting Time
+          wait(74000); //23.84sec
+          
+          //The Third Sound Round
+          play(sound75, 74000);
+          pause(sound75, 74020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 74120);
+          pause(sound120, 74160); 
+          
+          //Third Waiting time
+          wait(94000) //19.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 94000);
+          pause(sound80, 94020);
+          wait(94120);//0.1sec(100milisec);
+          play(sound120, 94120);
+          pause(sound120, 94160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+      function makeSound11() {
+             // let timer = 0;
+            
+            //The first Sound Round!!
+            play(sound120, 0);
+            pause(sound120, 40);
+            wait(9000); // 8.96sec
+            play(sound120, 9000);
+            pause(sound120, 9040);
+            wait(18000); //8.96sec
+            play(sound120, 18000);
+            pause(sound120, 18040);
+            wait(27000); // 8.96sec
+            play(sound120, 27000);
+            pause(sound120, 27040);
+
+          //Waiting time
+          wait(51000);//23.96
+
+          //The Second Sound Round
+          play(sound70, 51000);
+          pause(sound70, 51020);
+          wait(51120);//0.1sec(100milisec);
+          play(sound120, 51120);
+          pause(sound120, 51160); 
+
+          //Second Waiting Time
+          wait(71000); //19.84sec
+          
+          //The Third Sound Round
+          play(sound75, 71000);
+          pause(sound75, 71020);
+          // wait(44120);//0.1sec(100milisec);
+          play(sound120, 71120);
+          pause(sound120, 71160); 
+          
+          //Third Waiting time
+          wait(93000) //21.84sec
+          
+          //The Fourth Waiting Time
+          play(sound80, 93000);
+          pause(sound80, 93020);
+          wait(93120);//0.1sec(100milisec);
+          play(sound120, 93120);
+          pause(sound120, 93160);
+          
+          //Last Waiting Time
+          // wait(timer+80000);
+          // timer =+ 80000; 
+      }
+
+    </script>
+  </body>
+</html>
